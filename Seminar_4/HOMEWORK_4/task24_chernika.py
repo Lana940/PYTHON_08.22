@@ -1,3 +1,5 @@
+import random
+
 # Задача 24: В фермерском хозяйстве в Карелии выращивают чернику. Она растет на
 # круглой грядке, причем кусты высажены только по окружности. Таким образом, у
 # каждого куста есть ровно два соседних. Всего на грядке растет N кустов.
@@ -14,3 +16,18 @@
 
 # 4 -> 1 2 3 4
 # 9
+
+N_kustov = int(random.randint(1,10))
+print(N_kustov)
+berry = [random.randrange(1,6) for i in range(N_kustov)]
+print(berry)
+
+count = 0
+i = 1
+for i in berry:
+     if (berry[i] + berry[i+1] + berry[i-1] > count):
+         count = (berry[i] + berry[i+1] + berry[i-1])
+print(count)
+
+
+
